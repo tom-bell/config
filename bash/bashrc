@@ -1,0 +1,23 @@
+# Prompt
+export PS1="\[\e[1;30m\]\w\[\e[0m\]> "
+
+# <3 Vim
+export EDITOR=vim
+
+# Sudo autocompletion
+complete -cf sudo
+
+alias ls='ls -l --color=auto'
+eval `dircolors ~/.config/dir_colors`
+
+# Path
+export PATH=~/bin:$PATH:~/lib/android/platform-tools
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+if [ -f ~/.config/bash/git-completion.bash ]; then
+    . ~/.config/bash/git-completion.bash
+fi
+
+alias :q=exit

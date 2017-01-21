@@ -1,0 +1,67 @@
+" Pathogen
+execute pathogen#infect()
+
+" Automatic reload of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+" Indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Colorscheme
+colorscheme wombat256mod
+
+filetype off
+filetype plugin indent on
+syntax on
+
+" Line numbers and length
+set number
+set tw=79
+set nowrap
+set fo-=t
+
+" Backspace
+set backspace=2
+
+" History
+set history=750
+set undolevels=750
+
+" Tabbing
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+" Case insensitive search by default
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" C++ Auto-complete
+set nocp
+filetype plugin on
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/gl
+set tags+=~/.vim/tags/sdl
+set tags+=~/.vim/tags/sdl2
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1
+let OmniCpp_MayCompleteDot = 1
+let OmniCpp_MayCompleteArrow = 1
+let OmniCpp_MayCompleteScope = 1
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+let OmniCpp_SelectFirstItem = 2
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest
+
+map <C-o> :NERDTree<CR>
+inoremap <C-Space> <C-n>
+
+set modeline
+

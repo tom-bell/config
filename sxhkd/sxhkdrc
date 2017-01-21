@@ -1,0 +1,44 @@
+# Reload sxhkd
+alt + ctrl + Escape
+	pkill -USR1 -x sxhkd
+
+# Lock screen
+super + ctrl + shift + l
+	slock
+
+# Spawn terminal
+alt + shift + Return
+	urxvtc || urxvt
+
+# Instant-launch
+alt + d
+    rofi-run
+
+alt + r
+    urxvt -e ranger
+
+alt + q
+    urxvt -e htop
+
+# Global quit
+alt + shift + Escape
+	bspc quit
+
+# Close node
+alt + Escape
+	bspc node -c
+
+# Fullscreen node toggle
+alt + f
+    bspc node --state \~fullscreen
+
+# Node mode-switching
+alt + {t,shift + t,s}
+    bspc node -t {tiled,pseudo_tiled,floating}
+
+# Desktop switching
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} ^{1-9,10}
+
+~button1
+	bspc node pointed -f

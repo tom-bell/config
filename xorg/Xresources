@@ -1,0 +1,33 @@
+! ================================
+! =        Cursor settings       =
+! ================================
+Xcursor.theme:  DMZ-White
+Xcursor.size:   16 
+
+! ================================
+! =          Font settings       =
+! ================================
+Xft.antialias:	1
+Xft.autohint:	1
+Xft.dpi:	    109
+Xft.hinting:	1
+Xft.hintstyle:	hintfull
+Xft.lcdfilter:	lcddefault
+Xft.rgba:	    rgb
+
+! ================================
+! =         urxvt settings       =
+! ================================
+URxvt.scrollBar:    	false
+URxvt.depth: 	    	32
+URxvt.cursorBlink:	    1
+URxvt.cursorUnderline:	1
+URxvt.font:	        	xft:Fira Code:regular:pixelsize=12:antialias=true:hinting=true
+URxvt.letterSpace:      -2
+URxvt*interalBorder:    12
+!URxvt.boldFont:
+
+! Terminal colors
+#include "/home/tom/.config/xorg/colors/dotshare"
+
+! vim: ft=xdefaults
